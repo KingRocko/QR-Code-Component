@@ -98,6 +98,9 @@
         --line-height-400: 1.2;
         --line-height-500: 1.4;
 
+        --border-radius-1: 0.625rem;
+        --border-radius-2: 1.25rem;
+
         --letterspacing-400: 0.125rem;
 
         --spacing-200: 1rem;
@@ -112,19 +115,59 @@
         --clr-txt-light: var(--clr-slate-500);
 
         --clr-bg-brand: var(--clr-slate-300);
+        --clr-bg-light: var(--clr-white);
 
         --fs-heading-m: var(--fs-500);
         --fs-body-m: var(--fs-400);
 
+        --padding-card-1: var(--spacing-200);
+        --padding-card-2: var(--spacing-500);
+
+    }
+
+    body {
+        font-family: var(--ff-standard), sans-serif;
+        font-size: var(--fs-body-m);
+        color: var(--clr-txt-light);
+        background-color: var(--clr-bg-brand);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
 @layer layout {
 
+    .hero-title {
+        font-size: var(--fs-heading-m);
+        font-weight: 700;
+        line-height: var(--line-height-400);
+        color: var(--clr-txt-brand);
+    }
+
+    .paragraph-text {
+        font-size: var(--fs-body-m);
+        font-weight: 400;
+        line-height: var(--line-height-500);
+    }
+
+    .qr-code {
+        border-radius: var(--border-radius-1);
+
+    }
 }
 
 @layer components {
 
+    .card-wrapper {
+        inline-size: 20rem;
+        block-size: 31.1875rem;
+        background-color: var(--clr-bg-light);
+        border-radius: var(--border-radius-2);
+        padding-inline: var(--padding-card-1);
+        padding-block: var(--padding-card-1) var(--padding-card-2);
+    }
 }
 
 @layer utilities {
